@@ -44,9 +44,6 @@ int main(void)
     while (true) {
         char *s;
         int len;
-        
-        gethostname(hostname, LEN_HOSTNAME);
-        printf("hostname: %s/n", hostname);
     
         printf("MyShell $ ");
         s = fgets(command, MAX_LEN_LINE, stdin);
