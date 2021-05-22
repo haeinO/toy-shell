@@ -28,7 +28,7 @@ void exit_program(char *args[])
     if strcmp(args[0], "exit") == 0)
     {
         printf("EXIT\n");
-        exit(2);
+        exit(1);
     }
 }
 
