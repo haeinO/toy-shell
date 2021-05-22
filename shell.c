@@ -10,7 +10,7 @@
 #define MAX_LEN_LINE    100
 #define LEN_HOSTNAME    30
 
-int hostname(char *args[])
+void hostname(char *args[])
 {
     if (strcmp(args[0], "HOSTNAME") == 0)
     {
@@ -19,19 +19,17 @@ int hostname(char *args[])
         printf("username: %s\n", getpwuid(getuid())->pw_name);
         gethostname(hostname, LEN_HOSTNAME);
         printf("hostname: %s\n", hostname);
+        exit(1);
     }
-    
-    return 0;
 }
 
-int exit_program(char *args[])
+void exit_program(char *args[])
 {
     if strcmp(args[0], "exit") == 0)
     {
         printf("EXIT\n");
         exit(2);
     }
-    return 0;
 }
 
 int main(void)
